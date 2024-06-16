@@ -1,4 +1,10 @@
 import Image from "next/image";
+import {
+  Footer,
+  FooterLink,
+  FooterSection,
+  FooterText,
+} from "@/components/ui/footer";
 
 export default function Home() {
   return (
@@ -108,6 +114,18 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <Footer theme="dark" size="large">
+        <FooterSection>
+          <FooterLink href="/about">About Us</FooterLink>
+          <FooterLink href="/services">Services</FooterLink>
+          <FooterLink href="/contact">Contact</FooterLink>
+        </FooterSection>
+        <FooterSection>
+          <FooterText>
+            &copy; {new Date().getFullYear()} MySite. All rights reserved.
+          </FooterText>
+        </FooterSection>
+      </Footer>
     </main>
   );
 }
